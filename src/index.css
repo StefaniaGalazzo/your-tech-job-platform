@@ -62,6 +62,7 @@ h2 {
   border-radius: 20px;
   border: 1px solid;
   width: fit-content !important;
+  white-space: nowrap;
   margin: 0 10px 0 0;
 }
 .tag:hover {

@@ -49,7 +49,7 @@ export const Header = () => {
         <h3 className="animatedTitle display-3">
           {phrases[index].substring(0, charIndex)}
         </h3>
-        <Row className="g-3" style={{ width: "35%", margin: " 0 12%" }}>
+        <Row className="g-3" style={{ width: "40%", margin: " 0 12%" }}>
           <p className="tag">Full Remote</p>
           <p className="tag">Perfect RAL</p>
           <p className="tag">Annual Benefit</p>

@@ -53,10 +53,10 @@ const MainSearch = ({ favorites, removeFromFavorites, addToFavorites }) => {
   return (
     <Container className="mt-2 mb-5">
       <Row>
-        <Col xs={10} className="mx-auto ">
+        <Col xs={12} sm={10} className="mx-auto ">
           <h2 className="fs-5">Find Your Job!</h2>
         </Col>
-        <Col xs={10} className="mx-auto">
+        <Col xs={12} sm={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>
             <Form.Control
               type="search"
@@ -66,7 +66,7 @@ const MainSearch = ({ favorites, removeFromFavorites, addToFavorites }) => {
             />
           </Form>
         </Col>
-        <Col xs={10} className="mx-auto mb-5">
+        <Col xs={12} sm={10} className="mx-auto mb-5">
           {jobs.map((company) => (
             <div key={company._id}>
               <Job
