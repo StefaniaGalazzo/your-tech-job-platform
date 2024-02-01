@@ -11,17 +11,23 @@ export default function MyNav() {
   return (
     <Navbar expand="lg" className="sticky-top myNav px-5">
       <Container fluid>
-        <Link to={`/`} className="fw-bolder fs-5 p-2 border-pink py-0 me-5">
+        <Link
+          to={`/your-tech-job-platform`}
+          className="fw-bolder fs-5 p-2 border-pink py-0 me-5"
+        >
           Your Tech Job
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to={`/`} className={`${pathname === "/" && "active"}`}>
+            <Link
+              to={`/your-tech-job-platform`}
+              className={`${pathname === "/" && "active"}`}
+            >
               <p className="mb-0 me-4"> Home</p>
             </Link>
             <Link
-              to={`/favorites-companies`}
+              to={`/your-tech-job-platform/favorites-companies`}
               className={`${
                 pathname === "/favorites-companies" ? "active" : ""
               }`}
