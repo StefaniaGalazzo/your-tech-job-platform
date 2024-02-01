@@ -80,6 +80,7 @@ h2 {
 }
 .slider-icon {
   position: relative;
+  min-width: 400px;
   transform: rotate(15deg);
 }
 .active {
@@ -113,4 +114,27 @@ h2 {
 }
 .border-pink {
   border: 1px solid #ec7ed3;
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  border: 1px solid #e36fc8 !important;
+}
+.navbar-toggler-icon::after {
+  content: "☰";
+  position: absolute;
+  width: 90%;
+  top: 10%;
+  left: 5%;
+  color: #e36fc8;
+}
+.navbar-toggler {
+  color: transparent !important;
+  border: none !important;
+  box-shadow: none;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  .slider-icon {
+    transform: rotate(15deg) translateX(20px);
+  }
 }

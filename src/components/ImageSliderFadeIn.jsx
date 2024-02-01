@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import { useSpringRef, animated, useTransition } from "react-spring";
 import dev from "../../src/assets/imgs/dev.svg";
 import net from "../../src/assets/imgs/net.svg";
@@ -13,9 +13,9 @@ export const ImageSliderFadeIn = () => {
   const transitions = useTransition(index, {
     ref: transRef,
     keys: index,
-    from: { right: "-110%" },
+    from: { right: "-120%" },
     enter: { right: "0" },
-    leave: { right: "-110%" },
+    leave: { right: "-120%" },
     onRest: (_springs, _ctrl, item) => {
       if (index === item) {
         setIndex(index === images.length - 1 ? 0 : index + 1);

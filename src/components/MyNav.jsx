@@ -5,11 +5,9 @@ import { Link, useLocation } from "react-router-dom";
 export default function MyNav() {
   const location = useLocation();
   const pathname = location.pathname;
-  useEffect(() => {
-    console.log(location.pathname, "pathname");
-  }, []);
+
   return (
-    <Navbar expand="lg" className="sticky-top myNav px-5">
+    <Navbar expand="lg" className="sticky-top myNav px-sm-2 px-md-5 py-3">
       <Container fluid>
         <Link
           to={`/your-tech-job-platform`}

@@ -83,9 +83,6 @@ function DraggableList({ favorites, addToFavorites, removeFromFavorites }) {
         >
           <Row style={{ userSelect: "none" }}>
             <Col>
-              <h5 className="m-0">{i}</h5>
-            </Col>{" "}
-            <Col>
               <h5 className="m-0">{favorites[i].company_name}</h5>
             </Col>
             <Col className="text-end ms-auto">

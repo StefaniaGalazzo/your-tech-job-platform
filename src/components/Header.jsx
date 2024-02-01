@@ -49,14 +49,14 @@ export const Header = () => {
         <h3 className="animatedTitle display-3">
           {phrases[index].substring(0, charIndex)}
         </h3>
-        <Row className="g-3" style={{ width: "75%", margin: "30px auto" }}>
+        <Row className="g-3" style={{ width: "35%", margin: " 0 12%" }}>
           <p className="tag">Full Remote</p>
           <p className="tag">Perfect RAL</p>
           <p className="tag">Annual Benefit</p>
           <p className="tag">Training Course</p>
         </Row>
       </Col>
-      <Col>
+      <Col className="d-sm-none d-md-block">
         <ImageSliderFadeIn />
       </Col>
     </>
