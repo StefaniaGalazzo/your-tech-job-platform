@@ -15,12 +15,12 @@ function App() {
           <Route
             exact
             activeClassName="active"
-            path="/"
+            path="/your-tech-job-platform"
             element={<HomePage />}
           />
           <Route
             activeClassName="active"
-            path="/favorites-companies"
+            path="/your-tech-job-platform/favorites-companies"
             element={<PageFavorite />}
           />
           <Route path="/:company" element={<CompanySearchResults />} />
