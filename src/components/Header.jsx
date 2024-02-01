@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import MyNav from "./MyNav";
 import { ImageSliderFadeIn } from "./ImageSliderFadeIn";
@@ -49,7 +49,7 @@ export const Header = () => {
         <h3 className="animatedTitle display-3">
           {phrases[index].substring(0, charIndex)}
         </h3>
-        <Row style={{ width: "75%", margin: "30px auto" }}>
+        <Row className="g-3" style={{ width: "75%", margin: "30px auto" }}>
           <p className="tag">Full Remote</p>
           <p className="tag">Perfect RAL</p>
           <p className="tag">Annual Benefit</p>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { connect } from "react-redux";
@@ -50,7 +51,7 @@ const MainSearch = ({ favorites, removeFromFavorites, addToFavorites }) => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-2 mb-5">
       <Row>
         <Col xs={10} className="mx-auto ">
           <h2 className="fs-5">Find Your Job!</h2>

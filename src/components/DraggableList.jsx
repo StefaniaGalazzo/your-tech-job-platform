@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+/* eslint-disable react/prop-types */
+import { useRef } from "react";
 import { useSprings, animated } from "@react-spring/web";
 import { useDrag } from "react-use-gesture";
 import { clamp } from "lodash";
@@ -33,6 +34,8 @@ const fn =
 
 function DraggableList({ favorites, addToFavorites, removeFromFavorites }) {
   console.log(favorites, "favorites");
+  const order = useRef(favorites.map((_, index) => index));
+  const [springs, api] = useSprings(favorites.length, fn(order.current));
   //handler favorites
   const isCompanyInFavorites = (company) => {
     return favorites.some((favCompany) => favCompany._id === company._id);
@@ -41,23 +44,16 @@ function DraggableList({ favorites, addToFavorites, removeFromFavorites }) {
   const handleToggleFavorites = (company) => {
     if (isCompanyInFavorites(company)) {
       removeFromFavorites(company);
-      // Dopo la cancellazione, aggiorna l'ordine e gli stili delle molle
+      // Aggiorna l'ordine e gli stili
       const newOrder = favorites.map((_, index) => index);
       api.start(fn(newOrder));
       order.current = newOrder;
     } else {
       addToFavorites(company);
     }
-
-    // if (isCompanyInFavorites(company)) {
-    //   removeFromFavorites(company);
-    // } else {
-    //   addToFavorites(company);
-    // }
   };
   //
-  const order = useRef(favorites.map((_, index) => index));
-  const [springs, api] = useSprings(favorites.length, fn(order.current));
+
   const bind = useDrag(({ args: [originalIndex], active, movement: [, y] }) => {
     const curIndex = order.current.indexOf(originalIndex);
     const curRow = clamp(
@@ -69,6 +65,7 @@ function DraggableList({ favorites, addToFavorites, removeFromFavorites }) {
     api.start(fn(newOrder, active, originalIndex, curIndex, y));
     if (!active) order.current = newOrder;
   });
+
   return (
     <ListGroup className="content" style={{ height: favorites.length * 80 }}>
       {springs.map(({ zIndex, shadow, y, scale }, i) => (
@@ -85,6 +82,9 @@ function DraggableList({ favorites, addToFavorites, removeFromFavorites }) {
           }}
         >
           <Row style={{ userSelect: "none" }}>
+            <Col>
+              <h5 className="m-0">{i}</h5>
+            </Col>{" "}
             <Col>
               <h5 className="m-0">{favorites[i].company_name}</h5>
             </Col>
