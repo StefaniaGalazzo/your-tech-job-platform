@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 
