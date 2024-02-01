@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/your-tech-job-platform/static/css/main.adf6ef91.css",
+    "main.js": "/your-tech-job-platform/static/js/main.e2ca1ba8.js",
+    "static/media/net.svg": "/your-tech-job-platform/static/media/net.f364e5aea00cb165cd7209385fc908c5.svg",
+    "static/media/diamond-code.svg": "/your-tech-job-platform/static/media/diamond-code.92e51e9cb841d5d43aeec6b6f28c8b18.svg",
+    "static/media/dev.svg": "/your-tech-job-platform/static/media/dev.3070b9b18ac13b42a760a4734d0efd8f.svg",
+    "index.html": "/your-tech-job-platform/index.html",
+    "main.adf6ef91.css.map": "/your-tech-job-platform/static/css/main.adf6ef91.css.map",
+    "main.e2ca1ba8.js.map": "/your-tech-job-platform/static/js/main.e2ca1ba8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adf6ef91.css",
+    "static/js/main.e2ca1ba8.js"
+  ]
+}
